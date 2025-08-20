@@ -59,8 +59,7 @@
               "RelativeToolTip": "Api\\Program.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T23:57:46.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T23:57:46.705Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "Api\\DTOs\\GameOddsDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T23:57:23.87Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T23:57:23.87Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "Api\\Repositories\\OddsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T23:57:19.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T23:57:19.449Z"
             },
             {
               "$type": "Document",
@@ -98,8 +95,7 @@
               "RelativeToolTip": "Test\\OddsRepoTests.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAzwAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T23:56:17.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T23:56:17.592Z"
             },
             {
               "$type": "Document",
@@ -111,8 +107,7 @@
               "RelativeToolTip": "Core\\GameOdds.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T23:56:01.888Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T23:56:01.888Z"
             }
           ]
         }
