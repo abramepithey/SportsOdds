@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\abram\\source\\repos\\SportsOdds\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\test\\oddsrepotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|solutionrelative:test\\oddsrepotests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\test\\oddsapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|solutionrelative:test\\oddsapitests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D414EA-E650-4F98-9E18-CB77C2F8C052}|Core\\Core.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\core\\gameodds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D414EA-E650-4F98-9E18-CB77C2F8C052}|Core\\Core.csproj|solutionrelative:core\\gameodds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\api\\repositories\\oddsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|solutionrelative:api\\repositories\\oddsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\api\\dtos\\gameoddsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|solutionrelative:api\\dtos\\gameoddsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OddsApiTests.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsApiTests.cs",
+              "RelativeDocumentMoniker": "Test\\OddsApiTests.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsApiTests.cs",
+              "RelativeToolTip": "Test\\OddsApiTests.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-20T00:02:12.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Program.cs",
+              "RelativeDocumentMoniker": "Api\\Program.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Program.cs",
+              "RelativeToolTip": "Api\\Program.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:57:46.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GameOddsDto.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\DTOs\\GameOddsDto.cs",
+              "RelativeDocumentMoniker": "Api\\DTOs\\GameOddsDto.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\DTOs\\GameOddsDto.cs",
+              "RelativeToolTip": "Api\\DTOs\\GameOddsDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:57:23.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OddsRepository.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Repositories\\OddsRepository.cs",
+              "RelativeDocumentMoniker": "Api\\Repositories\\OddsRepository.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Repositories\\OddsRepository.cs",
+              "RelativeToolTip": "Api\\Repositories\\OddsRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:57:19.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OddsRepoTests.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsRepoTests.cs",
+              "RelativeDocumentMoniker": "Test\\OddsRepoTests.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsRepoTests.cs",
+              "RelativeToolTip": "Test\\OddsRepoTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:56:17.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GameOdds.cs",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Core\\GameOdds.cs",
+              "RelativeDocumentMoniker": "Core\\GameOdds.cs",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Core\\GameOdds.cs",
+              "RelativeToolTip": "Core\\GameOdds.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T23:56:01.888Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

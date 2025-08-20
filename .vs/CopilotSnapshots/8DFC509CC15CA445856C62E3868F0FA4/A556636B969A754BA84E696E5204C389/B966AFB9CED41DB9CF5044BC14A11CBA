@@ -1,0 +1,44 @@
+﻿namespace Api.DTOs
+{
+    public class GameOddsDto
+    {
+        public string GameId { get; set; } = string.Empty;
+        public string HomeTeam { get; set; } = string.Empty;
+        public string AwayTeam { get; set; } = string.Empty;
+        public decimal Spread { get; set; }
+        public decimal OverUnder { get; set; }
+        public DateTimeOffset LastUpdated { get; set; }
+    }
+
+    public class UpsertGameOddsDto
+    {
+        public string GameId { get; set; } = string.Empty;
+        public string HomeTeam { get; set; } = string.Empty;
+        public string AwayTeam { get; set; } = string.Empty;
+        public decimal Spread { get; set; }
+        public decimal OverUnder { get; set; }
+    }
+
+    public static class GameOddsMapper
+    {
+        public static GameOddsDto ToDto(Core.GameOdds odds) => new GameOddsDto
+        {
+            GameId = odds.GameId,
+            HomeTeam = odds.HomeTeam,
+            AwayTeam = odds.AwayTeam,
+            Spread = odds.Spread,
+            OverUnder = odds.OverUnder,
+            LastUpdated = odds.LastUpdated
+        };
+
+        public static Core.GameOdds ToDomain(UpsertGameOddsDto dto) => new Core.GameOdds
+        {
+            GameId = dto.GameId,
+            HomeTeam = dto.HomeTeam,
+            AwayTeam = dto.AwayTeam,
+            Spread = dto.Spread,
+            OverUnder = dto.OverUnder,
+            LastUpdated = DateTimeOffset.UtcNow
+        };
+    }
+}

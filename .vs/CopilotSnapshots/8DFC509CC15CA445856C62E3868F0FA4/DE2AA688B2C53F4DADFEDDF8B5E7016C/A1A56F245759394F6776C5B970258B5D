@@ -1,0 +1,57 @@
+﻿using Api.DTOs;
+using Api.Repositories;
+using Core;
+
+namespace Api
+{
+    public class Program // Make Program public for test accessibility
+    {
+        public static void Main(string[] args)
+        {
+            var builder = WebApplication.CreateBuilder(args);
+
+            // Add services to the container.
+            builder.Services.AddControllers();
+            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+            builder.Services.AddOpenApi();
+            builder.Services.AddSingleton<IOddsRepository, OddsRepository>();
+            builder.Services.AddEndpointsApiExplorer();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.MapOpenApi();
+            }
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.MapGet("/api/odds", (IOddsRepository repo) =>
+            {
+                var odds = repo.GetAll().Select(GameOddsMapper.ToDto);
+                return Results.Ok(odds);
+            });
+
+            app.MapGet("/api/odds/{gameId}", (string gameId, IOddsRepository repo) =>
+            {
+                var odds = repo.GetByGameId(gameId);
+                return odds is null ? Results.NotFound() : Results.Ok(GameOddsMapper.ToDto(odds));
+            });
+
+            app.MapPost("/api/odds", async (UpsertGameOddsDto dto, IOddsRepository repo) =>
+            {
+                var domain = GameOddsMapper.ToDomain(dto);
+                if (!repo.Upsert(domain, out var error))
+                    return Results.BadRequest(new { error });
+                return Results.Ok(GameOddsMapper.ToDto(domain));
+            });
+
+            app.Run();
+        }
+    }
+}
