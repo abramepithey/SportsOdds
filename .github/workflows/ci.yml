@@ -18,9 +18,13 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0.x'
+        include-prerelease: true
 
     - name: Restore dependencies
       run: dotnet restore
+
+    - name: Check dotnet version
+      run: dotnet --info
 
     - name: Build solution
       run: dotnet build SportsOdds.sln --no-restore --configuration Release
