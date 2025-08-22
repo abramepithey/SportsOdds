@@ -70,8 +70,10 @@ jobs:
         with:
           app-name: 'sportsodds-api'
           slot-name: 'Production'
-          package: ./publish_output
+          package: .net-app
+          clean: true
 
           
+
 
 
