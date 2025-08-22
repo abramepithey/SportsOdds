@@ -19,7 +19,9 @@ namespace Api
             // Add services to the container.
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+            #if NET9_0
             builder.Services.AddOpenApi();
+            #endif
             builder.Services.AddSingleton<IOddsRepository, OddsRepository>();
             builder.Services.AddEndpointsApiExplorer();
 
@@ -28,7 +30,10 @@ namespace Api
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.MapOpenApi();
+
+            #if NET9_0
+            app.MapOpenApi();
+            #endif
             }
 
             app.UseHttpsRedirection();
