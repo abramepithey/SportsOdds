@@ -11,28 +11,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup .NET 9
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '9.0.x'
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+      # Restore all projects; no --framework
+      - name: Restore dependencies
+        run: dotnet restore SportsOdds.sln
 
-    - name: Build solution
-      run: dotnet build SportsOdds.sln --no-restore --configuration Release
+      # Build targeting net8.0
+      - name: Build solution
+        run: dotnet build SportsOdds.sln --configuration Release --framework net8.0
 
-    - name: Run tests
-      run: dotnet test SportsOdds.sln --no-build --verbosity normal
+      # Run tests targeting net8.0
+      - name: Run tests
+        run: dotnet test SportsOdds.sln --no-build --configuration Release --framework net8.0 --logger trx --results-directory ./TestResults
 
-    - name: Publish artifact
-      run: dotnet publish Api/Api.csproj -c Release -o ./publish
+      # Publish API artifact targeting net8.0
+      - name: Publish API artifact
+        run: dotnet publish api/Api.csproj -c Release -o ./publish --framework net8.0
 
-    - name: Upload published app
-      uses: actions/upload-artifact@v4
-      with:
-        name: sports-odds-api
-        path: ./publish
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sports-odds-api
+          path: ./publish
