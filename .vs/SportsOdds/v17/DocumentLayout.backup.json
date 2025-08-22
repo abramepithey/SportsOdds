@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\abram\\source\\repos\\SportsOdds\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\test\\test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1996BC2B-9E27-458E-B9B2-EB54E07B3342}|Test\\Test.csproj|solutionrelative:test\\test.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|c:\\users\\abram\\source\\repos\\sportsodds\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF5AF012-DDCA-494D-81B8-6EB8EC4B9976}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Test",
+              "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\Test.csproj",
+              "RelativeDocumentMoniker": "Test\\Test.csproj",
+              "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\Test.csproj",
+              "RelativeToolTip": "Test\\Test.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-22T05:15:10.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Api",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Api.csproj",
               "RelativeDocumentMoniker": "Api\\Api.csproj",
@@ -54,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "OddsApiTests.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsApiTests.cs",
               "RelativeDocumentMoniker": "Test\\OddsApiTests.cs",
@@ -62,12 +79,11 @@
               "RelativeToolTip": "Test\\OddsApiTests.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T00:02:12.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T00:02:12.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Program.cs",
               "RelativeDocumentMoniker": "Api\\Program.cs",
@@ -80,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GameOddsDto.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\DTOs\\GameOddsDto.cs",
               "RelativeDocumentMoniker": "Api\\DTOs\\GameOddsDto.cs",
@@ -92,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "OddsRepository.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Repositories\\OddsRepository.cs",
               "RelativeDocumentMoniker": "Api\\Repositories\\OddsRepository.cs",
@@ -104,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "OddsRepoTests.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Test\\OddsRepoTests.cs",
               "RelativeDocumentMoniker": "Test\\OddsRepoTests.cs",
@@ -116,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GameOdds.cs",
               "DocumentMoniker": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Core\\GameOdds.cs",
               "RelativeDocumentMoniker": "Core\\GameOdds.cs",

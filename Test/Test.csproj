@@ -8,6 +8,10 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(TargetFramework)'=='net8.0'">
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.8" />
