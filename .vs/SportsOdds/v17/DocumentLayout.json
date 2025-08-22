@@ -38,8 +38,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -49,8 +53,7 @@
               "ToolTip": "C:\\Users\\abram\\source\\repos\\SportsOdds\\Api\\Api.csproj",
               "RelativeToolTip": "Api\\Api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-21T21:03:06.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-21T21:03:06.329Z"
             },
             {
               "$type": "Document",
@@ -62,8 +65,7 @@
               "RelativeToolTip": "Test\\OddsApiTests.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwEAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T00:02:12.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T00:02:12.804Z"
             },
             {
               "$type": "Document",
