@@ -52,4 +52,5 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
-/.vs/SportsOdds/CopilotIndices/17.14.995.13737
+/.vs/SportsOdds/CopilotIndices/
+/.vs/SportsOdds/copilot-chat/
