@@ -11,28 +11,39 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup .NET 9
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '9.0.x'
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+      # Force all projects to use net8.0 for CI
+      - name: Force net8.0 in project files
+        run: |
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Api/Api.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Core/Core.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Test/Test.csproj
 
-    - name: Build solution
-      run: dotnet build SportsOdds.sln --no-restore --configuration Release
+      # Restore all projects (now only net8.0)
+      - name: Restore dependencies
+        run: dotnet restore SportsOdds.sln
 
-    - name: Run tests
-      run: dotnet test SportsOdds.sln --no-build --verbosity normal
+      # Build targeting net8.0
+      - name: Build solution
+        run: dotnet build SportsOdds.sln --configuration Release --framework net8.0
 
-    - name: Publish artifact
-      run: dotnet publish Api/Api.csproj -c Release -o ./publish
+      # Run tests targeting net8.0
+      - name: Run tests
+        run: dotnet test SportsOdds.sln --no-build --configuration Release --framework net8.0 --logger trx --results-directory ./TestResults
 
-    - name: Upload published app
-      uses: actions/upload-artifact@v4
-      with:
-        name: sports-odds-api
-        path: ./publish
+      # Publish API artifact targeting net8.0
+      - name: Publish API artifact
+        run: dotnet publish api/Api.csproj -c Release -o ./publish --framework net8.0
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sports-odds-api
+          path: ./publish
