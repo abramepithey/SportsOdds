@@ -18,6 +18,7 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0.x'
+        include-prerelease: true
 
     - name: Restore dependencies
       run: dotnet restore
@@ -26,7 +27,7 @@ jobs:
       run: dotnet build SportsOdds.sln --no-restore --configuration Release
 
     - name: Run tests
-      run: dotnet test SportsOdds.sln --no-build --verbosity normal
+      run: dotnet test SportsOdds.sln --no-build --logger trx --results-directory ./TestResults --framework net9.0
 
     - name: Publish artifact
       run: dotnet publish Api/Api.csproj -c Release -o ./publish
