@@ -11,28 +11,48 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Setup .NET 9
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: '9.0.x'
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+      # Debug: list files to confirm project paths
+      - name: List repository files
+        run: ls -R
 
-    - name: Build solution
-      run: dotnet build SportsOdds.sln --no-restore --configuration Release
+      # Force all projects to net8.0 for CI
+      - name: Force net8.0 in project files
+        run: |
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Api/Api.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Core/Core.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Test/Test.csproj
 
-    - name: Run tests
-      run: dotnet test SportsOdds.sln --no-build --verbosity normal
+      # Restore dependencies (all projects)
+      - name: Restore dependencies
+        run: dotnet restore SportsOdds.sln
 
-    - name: Publish artifact
-      run: dotnet publish Api/Api.csproj -c Release -o ./publish
+      # Clean solution to remove old artifacts
+      - name: Clean solution
+        run: dotnet clean SportsOdds.sln --configuration Release
 
-    - name: Upload published app
-      uses: actions/upload-artifact@v4
-      with:
-        name: sports-odds-api
-        path: ./publish
+      # Build solution (single-threaded to avoid file lock)
+      - name: Build solution
+        run: dotnet build SportsOdds.sln --configuration Release --framework net8.0 /m:1
+
+      # Run tests (single-threaded)
+      - name: Run tests
+        run: dotnet test SportsOdds.sln --no-build --configuration Release --framework net8.0 --logger trx --results-directory ./TestResults /m:1
+
+      # Publish API artifact
+      - name: Publish API artifact
+        run: dotnet publish Api/Api.csproj -c Release -o ./publish --framework net8.0
+
+      # Upload artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: sports-odds-api
+          path: ./publish
