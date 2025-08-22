@@ -24,7 +24,10 @@ jobs:
           dotnet-version: '8.x'
 
       - name: Force net8.0 for build
-        run: sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' api/Api.csproj
+        run: |
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Api/Api.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Core/Core.csproj
+          sed -i 's|<TargetFrameworks>.*</TargetFrameworks>|<TargetFramework>net8.0</TargetFramework>|g' Test/Test.csproj
 
       - name: Restore dependencies
         run: dotnet restore
@@ -39,8 +42,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: ${{env.DOTNET_ROOT}}/myapp
-
+          path: ./publish_output
+          
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -70,3 +73,4 @@ jobs:
           package: .
 
           
+
