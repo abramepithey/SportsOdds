@@ -26,7 +26,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Run tests
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test SportsOdds.Tests/SportsOdds.Tests.csproj --no-build --verbosity normal
 
     - name: Publish artifact
       run: dotnet publish SportsOdds.Api/SportsOdds.Api.csproj -c Release -o ./publish
